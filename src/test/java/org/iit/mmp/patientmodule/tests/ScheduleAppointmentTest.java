@@ -17,9 +17,11 @@ import org.openqa.selenium.By;
 import org.testng.asserts.SoftAssert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+//This test is about Scheduling an Appointment(US_005)
 
-public class ScheduleAppointmentTest extends TestBase {
-
+public class ScheduleAppointmentTest extends TestBase
+{
+	
 	Utility util;
 	Helperclass helperclass;
 	AdminPortalPage adminPortalPage;
@@ -32,14 +34,18 @@ public class ScheduleAppointmentTest extends TestBase {
 
        Utility util=new Utility(driver);
 	   helperclass=new Helperclass(driver);
+	   //Launching the Patient Portal.
 		helperclass.launchApplicationURL("http://96.84.175.78/MMP-Release2-Integrated-Build.6.8.000/portal/login.php");
 		helperclass.verifyvalidateLogin();
+		//Navigating the module:Schedule Appointment
 		helperclass.moduleNavigation("Schedule Appointment");
+		//Click on Create New Appointment
 		clickOnCreatenewAppointmentButton();
 		helperclass.captureScreenshot("clickOnCreatenewAppointmentButton");
+		//Booking an Appointment
 		HashMap<String,String> hMap=selectDoctor("Dr.Charlie");
 		Thread.sleep(3000);
-		
+		//Below Validating Appointment on Home Page as well as ScheduleappointmentPage.
 		SoftAssert sa=new SoftAssert();
 		sa.assertTrue(validateAppointmentDetailsinHomePage(hMap),"");
 		
@@ -51,6 +57,7 @@ public class ScheduleAppointmentTest extends TestBase {
 		sa.assertAll();
 		
 		Helperclass helperclass=new Helperclass(driver);
+		//Now Login to Admin Module
 		helperclass.launchApplicationURL("http://96.84.175.78/MMP-Release2-Admin-Build.2.1.000/login.php");
 		helperclass.captureScreenshot("US_001_LaunchApplication");
 		util.LoginUser("Thomas_444", "Edison_444");
@@ -61,23 +68,19 @@ public class ScheduleAppointmentTest extends TestBase {
 		adminPortalPage.NavigatetoAndClickPatients();
 		adminPortalPage.searchforPatient("UserTest");
 		AdminHomePage adminhomePage=new AdminHomePage(driver);
-		
+		//Clicking on Create Visit
 		adminhomePage.clickOnCreateVisit();
 		helperclass.captureScreenshot("US003_clickOnCreateVisit");
+		//Booking an Appointment through Admin.
 		HashMap<String,String> hMap1=selectDoctor("Dr.Beth");
 		
-		
+		//Now again Login to Patient Portal 
 		helperclass.launchApplicationURL("http://96.84.175.78/MMP-Release2-Integrated-Build.6.8.000/portal/login.php");
 		helperclass.verifyvalidateLogin();
 		helperclass.moduleNavigation("HOME");
-		
+		//Below Validating Appointment on Home as well as Schedule Appointment.
 		SoftAssert sa1=new SoftAssert();
 		sa1.assertTrue(validateAppointmentDetailsinHomePage(hMap),"");
-		
-		
-		
-		
-		
 
 	}
 

@@ -33,67 +33,67 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class PayFeeTest extends TestBase {
 
-	//private static final String service = null;
-	//private static final String appointment = null;
 
 
 	Utility util;
 	Helperclass helperclass;
 	private By NavigateToPatientsTab;
 	ScheduleAppointmentTest scheduleappTest;
+	AdminLoginPage adminlogout;
 
 	@Test(description="US_006 Pay Fees",groups={"US_001","regression","sanity","Adminmodulemodule"})
 	public void validate() throws InterruptedException, IOException
 	{
 		Utility util=new Utility(driver);
 		Helperclass helperclass=new Helperclass(driver);
+		//Launching AdminUrl:
 		helperclass.launchApplicationURL("http://96.84.175.78/MMP-Release2-Admin-Build.2.1.000/login.php");
 		helperclass.captureScreenshot("US_001_LaunchApplication");
 		util.LoginUser("Thomas_444", "Edison_444");
-		//helperclass.captureScreenshot("US_002_verifyValidLogin");
+		helperclass.captureScreenshot("US_002_verifyValidLogin");
 		helperclass.moduleNavigation("Patients");
+		//Clicking on Patient Tab:
 		NavigatetoAndClickPatients();
 		searchforPatient();
 		clickOnCreateVisit();
-		//helperclass.captureScreenshot("US003_clickOnCreateVisit");
+		helperclass.captureScreenshot("US003_clickOnCreateVisit");
+		//Booking an Appointment from admin.
 		HashMap<String,String> hMap=selectDoctor("Dr.Beth");
-		//helperclass.captureScreenshot("US004_selectDoctor");
-		
+		helperclass.captureScreenshot("US004_selectDoctor");
 		Thread.sleep(3000);
 		helperclass.moduleNavigation("Patients");
 		searchforPatient();
-		
-		
-		
+		//Clicking on Create Fee
 		clickonCreateFeebutton();
 		Thread.sleep(3000);
 		HashMap<String,String> hMap1=FeeDetails();
 		//helperclass.captureScreenshot("FeeDetails");
 	    SoftAssert sa=new SoftAssert();
 	    Thread.sleep(3000);
+	    //Fee Sucessfully Entered.
 		String actual = readSuccessMessage();
 		String expected ="Fee Successfully Entered.";
 		Thread.sleep(3000);
-		//helperclass.captureScreenshot("Fee Successfully Entered.");
-		//Assert.assertEquals(actual, expected);
+		//Log out from Admin
+		AdminLoginPage adminlogout=new AdminLoginPage(driver);
+		adminlogout.adminLogout();
 		
-		
+		//Now Launching Patient Portal Login:
 		helperclass.launchApplicationURL("http://96.84.175.78/MMP-Release2-Integrated-Build.6.8.000/portal/login.php");
+		//Verifying the Login.
 		helperclass.verifyvalidateLogin();
+		//Click On PayFee
 		helperclass.moduleNavigation("Fees");
 //		SoftAssert sA=new SoftAssert();
 //		sA.assertTrue(scheduleappTest.validateAppointmentDetailsinHomePage(hMap),"");
 //		
-		
 		Thread.sleep(3000);
-		PayFeesPage payFee=new PayFeesPage(driver);
-		payFee.ClickOnPayNow();
-		payFee.SelectPayment();
-		payFee.ClickOnContinue();
-		//helperclass.captureScreenshot("CardDetails");
-		payFee.CardDetails();
-		 
-		 
+		//PayFeesPage payFee=new PayFeesPage(driver);
+		ClickOnPayNow();
+		SelectPayment();
+		ClickOnContinue();
+		
+		CardDetails(); 
 		
 	}
 
@@ -101,20 +101,7 @@ public class PayFeeTest extends TestBase {
 	{
 		
 		String alertText = null;
-	
-//		Alert alrt  = driver.switchTo().alert();
-//		String msg = alrt.getText();
-//		System.out.println(msg);
-//        Thread.sleep(3000);
-//		alrt.accept();
-//		System.out.println(alrt.getText());
-//		DesiredCapabilities dc = new DesiredCapabilities();
-//		dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
-//		//d = new ChromeDriver(dc);
-//		
-//		try {
-//		   
-//		} catch (UnhandledAlertException f) {
+
 		    try {
 		        Alert alert = driver.switchTo().alert();
 		        alertText = alert.getText();
@@ -127,9 +114,6 @@ public class PayFeeTest extends TestBase {
 		    return alertText;
 		}
 		
-		//return  readSuccessMessage();
-
-	
 	public void NavigatetoAndClickPatients() throws InterruptedException
 	{
 		
@@ -145,8 +129,6 @@ public class PayFeeTest extends TestBase {
 		AdminPortalPage patientpage=new AdminPortalPage(driver);
 		//patientpage.searchforPatient("TestQ");
 		patientpage.searchforPatient("UserTest");
-		
-
 
 	}
 
@@ -182,9 +164,34 @@ public class PayFeeTest extends TestBase {
 
 
 	}
+	
+	public void ClickOnPayNow()
+	{
+		PayFeesPage payFee=new PayFeesPage(driver);
+		payFee.ClickOnPayNow();
+	}
 
 	
+	public void SelectPayment() {
+		PayFeesPage payFee=new PayFeesPage(driver);
+		payFee.SelectPayment();
+		
+		
+	}
+	public void ClickOnContinue()
+	{
+		PayFeesPage payFee=new PayFeesPage(driver);
+		payFee.ClickOnContinue();
+		
+	}
 	
+	public void CardDetails() throws InterruptedException {
+		PayFeesPage payFee=new PayFeesPage(driver);
+		payFee.CardDetails();
+		
+	}
+	
+
 
 
 

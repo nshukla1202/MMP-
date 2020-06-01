@@ -112,17 +112,6 @@ public class AdminHomePage {
 		Utility util=new Utility(driver);
 		//String selectAppointments="";
 		String selectAppointments=util.getCalFutureDate(20);
-		
-		//new Select(driver.findElement(Selectiondropdown)).getAllSelectedOptions();
-		//new Select(driver.findElement(Selectiondropdown)).selectByVisibleText(selectAppointments);
-		
-	
-		//WebElement e=driver.findElement(Selectiondropdown);
-		//e.click();
-		//Select select=new Select(e);
-		
-		//select.selectByVisibleText(selectAppointments);
-		//select.selectByVisibleText("06/14/2020");
 
 		String service="vaccination";
 		WebElement e1=driver.findElement(selectservice);
@@ -132,8 +121,6 @@ public class AdminHomePage {
 		select1.selectByVisibleText("vaccination");
 
 		driver.findElement(submitFee).click();
-		//driver.wait(2000);
-
 		hMap.put("SelectiondropdownDate",selectAppointments);
 		hMap.put("selectservice", service);
 
@@ -153,10 +140,12 @@ public class AdminHomePage {
 		return msg;	
 		
 	}
+	
+	
 
 
 }
-//
+
 
 
 

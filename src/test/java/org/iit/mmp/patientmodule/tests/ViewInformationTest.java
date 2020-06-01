@@ -1,5 +1,6 @@
 package org.iit.mmp.patientmodule.tests;
 import java.io.IOException;
+
 import java.util.concurrent.TimeUnit;
 
 import org.iit.mmp.base.TestBase;
@@ -16,6 +17,8 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+//This Test Scenario Is about validating the text On Information Tab.
 public class ViewInformationTest extends TestBase {	
 
 	Utility util;
@@ -26,13 +29,15 @@ public class ViewInformationTest extends TestBase {
 	{
 		Helperclass helperclass=new Helperclass(driver);
 		helperclass=new Helperclass(driver);
-		//instantiateDriver();
+		//Launching the PatientPortal.
 		helperclass.launchApplicationURL("http://96.84.175.78/MMP-Release2-Integrated-Build.6.8.000/portal/login.php");
 		helperclass.verifyvalidateLogin();
 		//helperclass.captureScreenshot("verifyvalidateLogin");
+		//Navigating to the Information Tab
 		helperclass.moduleNavigation("Information");
 		NavigatetoAndClickInformationTab();
 		helperclass.captureScreenshot("NavigatetoAndClickInformationTab");
+		//Validating the Text On Information Tab.
 		validateText();
 		SoftAssert sa=new SoftAssert();
 		String actualText=driver.findElement(By.xpath("//div[@class='panel-title']")).getText();

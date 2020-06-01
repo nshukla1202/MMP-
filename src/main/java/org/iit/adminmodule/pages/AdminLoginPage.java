@@ -12,6 +12,8 @@ public class AdminLoginPage {
 	By SignInButton=By.name("admin");
 
 	By AdminPortal=By.xpath("//h3[@class='panel-title']");
+	
+	By adminLogout=By.xpath("//span[contains(text(),'Logout')]");
 
 	public AdminLoginPage(WebDriver driver) {
 
@@ -29,6 +31,12 @@ public class AdminLoginPage {
 		Thread.sleep(2000);
 
 		return driver.findElement(AdminPortal).isDisplayed();
+	}
+	
+	public void adminLogout() {
+		
+		driver.findElement(adminLogout).click();
+		
 	}
 
 
