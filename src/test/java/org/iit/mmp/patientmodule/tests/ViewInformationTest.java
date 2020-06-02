@@ -19,13 +19,17 @@ import org.testng.asserts.SoftAssert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 //This Test Scenario Is about validating the text On Information Tab.
+
+
 public class ViewInformationTest extends TestBase {	
 
 	Utility util;
 	Helperclass helperclass;
-
+	
+	
+	 
 	@Test(description="US_005 View Information",groups={"US_001","regression","sanity","patientmodule"})
-	public void validateviewInforamtion() throws InterruptedException, IOException 
+	public void validateviewInforamtion() throws InterruptedException, IOException
 	{
 		Helperclass helperclass=new Helperclass(driver);
 		helperclass=new Helperclass(driver);
@@ -36,8 +40,11 @@ public class ViewInformationTest extends TestBase {
 		//Navigating to the Information Tab
 		helperclass.moduleNavigation("Information");
 		NavigatetoAndClickInformationTab();
-		helperclass.captureScreenshot("NavigatetoAndClickInformationTab");
+		
+	   //helperclass.captureScreenshot("NavigatetoAndClickInformationTab");
+		
 		//Validating the Text On Information Tab.
+		
 		validateText();
 		SoftAssert sa=new SoftAssert();
 		String actualText=driver.findElement(By.xpath("//div[@class='panel-title']")).getText();
@@ -46,6 +53,7 @@ public class ViewInformationTest extends TestBase {
 		sa.assertEquals(actualText, expectedText);
 		
 		helperclass.captureScreenshot("validateText");
+		
 	}
 
 	public void NavigatetoAndClickInformationTab() throws InterruptedException
