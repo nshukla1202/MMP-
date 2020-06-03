@@ -36,5 +36,16 @@ Step 8>Aply and save
 Step9>Run and validate go to Build Now and see the logs and console.
 
 
-*Jenkins Integration With GIT.*
+*Jenkins Integration With GIT.* and Provide Repo url
+Step1>Under the I have select Git
+Step2>Under Build Trigger POLL SCM>With scheduler just put ******(It will check for the git  reposssitory for every minute of changes)
+Step3>c:
+cd C:\Neha\Selenium\SeleniumJavaProject\MMPProject
+mvn clean test
+echo Success
+Step4>Apply and Save.
+Step5>
+
+
+
 
