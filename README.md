@@ -1,6 +1,6 @@
 # MMP-
 
-Run Selenium TestNG Test with Maven Command Line..
+*Run Selenium TestNG Test with Maven Command Line..**
 This Project is controlled by Pom.xml.
 1>Added the compiler plugin
 2>Added the surefire plugin
@@ -12,7 +12,7 @@ Step 2>mvn clean test
 Stest3>All the testNg test will run
 Step4>Bulid Success
 
-Run the  TestNg test from Eclipse"
+*Run the  TestNg test from Eclipse*
 
 Step1>Right click on pom.xml.
 Step2>Run as>Maven Test
@@ -36,4 +36,5 @@ Step 8>Aply and save
 Step9>Run and validate go to Build Now and see the logs and console.
 
 
-Step
+*Jenkins Integration With GIT.*
+
