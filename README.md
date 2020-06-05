@@ -46,6 +46,13 @@ echo Success
 Step4>Apply and Save.
 Step5>
 
+*Run the Testcases from Command Line
+
+I have created 1 batch file.
+Under the batch File i have provided the location of the file.
+And provide command mvn clean test.
+Save it as .bat file as Trigger MMP.
+When TriggerMMP Will run all the testcases.
 
 
 
