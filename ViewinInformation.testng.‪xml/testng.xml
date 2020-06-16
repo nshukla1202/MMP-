@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false" verbose="10">
+  <test name="ViewInformationTest">
+  
+  <parameter name="url" value="http://96.84.175.78/MMP-Release2-Integrated-Build.6.8.000/portal/login.php"/>
+  <parameter name="moduleNavigation" value="Information"></parameter>
+  
+  
+    <classes>
+      <class name="org.iit.mmp.patientmodule.tests.ViewInformationTest"/>
+     
+      
+    </classes>
+  </test> 
+</suite> 

@@ -2,43 +2,33 @@
 <testng-results total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-31T19:04:34Z" name="Default suite" finished-at="2020-05-31T19:06:23Z" duration-ms="108823">
+  <suite started-at="2020-06-10T13:18:29Z" name="Default suite" finished-at="2020-06-10T13:18:38Z" duration-ms="9021">
     <groups>
+      <group name="patientmodule">
+        <method signature="RegistrationPatientTests.validateRegistration()[pri:0, instance:org.iit.mmp.patientmodule.tests.RegistrationPatientTests@2e005c4b]" name="validateRegistration" class="org.iit.mmp.patientmodule.tests.RegistrationPatientTests"/>
+      </group> <!-- patientmodule -->
       <group name="regression">
-        <method signature="PayFeeTest.validate()[pri:0, instance:org.iit.adminmodule.tests.PayFeeTest@4466af20]" name="validate" class="org.iit.adminmodule.tests.PayFeeTest"/>
+        <method signature="RegistrationPatientTests.validateRegistration()[pri:0, instance:org.iit.mmp.patientmodule.tests.RegistrationPatientTests@2e005c4b]" name="validateRegistration" class="org.iit.mmp.patientmodule.tests.RegistrationPatientTests"/>
       </group> <!-- regression -->
-      <group name="Adminmodulemodule">
-        <method signature="PayFeeTest.validate()[pri:0, instance:org.iit.adminmodule.tests.PayFeeTest@4466af20]" name="validate" class="org.iit.adminmodule.tests.PayFeeTest"/>
-      </group> <!-- Adminmodulemodule -->
       <group name="US_001">
-        <method signature="PayFeeTest.validate()[pri:0, instance:org.iit.adminmodule.tests.PayFeeTest@4466af20]" name="validate" class="org.iit.adminmodule.tests.PayFeeTest"/>
+        <method signature="RegistrationPatientTests.validateRegistration()[pri:0, instance:org.iit.mmp.patientmodule.tests.RegistrationPatientTests@2e005c4b]" name="validateRegistration" class="org.iit.mmp.patientmodule.tests.RegistrationPatientTests"/>
       </group> <!-- US_001 -->
       <group name="sanity">
-        <method signature="PayFeeTest.validate()[pri:0, instance:org.iit.adminmodule.tests.PayFeeTest@4466af20]" name="validate" class="org.iit.adminmodule.tests.PayFeeTest"/>
+        <method signature="RegistrationPatientTests.validateRegistration()[pri:0, instance:org.iit.mmp.patientmodule.tests.RegistrationPatientTests@2e005c4b]" name="validateRegistration" class="org.iit.mmp.patientmodule.tests.RegistrationPatientTests"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2020-05-31T19:04:34Z" name="Default test" finished-at="2020-05-31T19:06:23Z" duration-ms="108823">
-      <class name="org.iit.adminmodule.tests.PayFeeTest">
-        <test-method is-config="true" signature="instantiateDriver()[pri:0, instance:org.iit.adminmodule.tests.PayFeeTest@4466af20]" started-at="2020-05-31T15:04:34Z" name="instantiateDriver" finished-at="2020-05-31T15:04:44Z" duration-ms="9578" status="PASS">
+    <test started-at="2020-06-10T13:18:29Z" name="Default test" finished-at="2020-06-10T13:18:38Z" duration-ms="9021">
+      <class name="org.iit.mmp.patientmodule.tests.RegistrationPatientTests">
+        <test-method is-config="true" signature="instantiateDriver()[pri:0, instance:org.iit.mmp.patientmodule.tests.RegistrationPatientTests@2e005c4b]" started-at="2020-06-10T09:18:29Z" name="instantiateDriver" finished-at="2020-06-10T09:18:35Z" duration-ms="5990" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiateDriver -->
-        <test-method signature="validate()[pri:0, instance:org.iit.adminmodule.tests.PayFeeTest@4466af20]" started-at="2020-05-31T15:04:44Z" name="validate" description="US_006 Pay Fees" finished-at="2020-05-31T15:06:23Z" duration-ms="99227" status="FAIL">
-          <exception class="org.openqa.selenium.support.ui.UnexpectedTagNameException">
-            <message>
-              <![CDATA[Element should have been "select" but was "option"
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NEHA-PC', ip: '192.168.154.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
-Driver info: driver.version: unknown]]>
-            </message>
+        <test-method signature="validateRegistration()[pri:0, instance:org.iit.mmp.patientmodule.tests.RegistrationPatientTests@2e005c4b]" started-at="2020-06-10T09:18:35Z" name="validateRegistration" description="US_001 Registration of the Page" finished-at="2020-06-10T09:18:38Z" duration-ms="3015" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been "select" but was "option"
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NEHA-PC', ip: '192.168.154.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.<init>(Select.java:48)
-	at org.iit.mmp.patientmodule.pages.PayFeesPage.CardDetails(PayFeesPage.java:68)
-	at org.iit.adminmodule.tests.PayFeeTest.validate(PayFeeTest.java:94)
+              <![CDATA[java.lang.NullPointerException
+	at org.iit.mmp.helper.Helperclass.launchApplicationURL(Helperclass.java:40)
+	at org.iit.mmp.patientmodule.tests.RegistrationPatientTests.validateRegistration(RegistrationPatientTests.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -65,11 +55,11 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.support.ui.UnexpectedTagNameException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validate -->
-      </class> <!-- org.iit.adminmodule.tests.PayFeeTest -->
+        </test-method> <!-- validateRegistration -->
+      </class> <!-- org.iit.mmp.patientmodule.tests.RegistrationPatientTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

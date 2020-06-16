@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test" verbose="2">
     <classes>
-      <class name="org.iit.adminmodule.tests.PayFeeTest"/>
+      <class name="org.iit.mmp.patientmodule.tests.RegistrationPatientTests"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="org.iit.adminmodule.tests.PayFeeTest">
+      <class name="org.iit.mmp.patientmodule.tests.RegistrationPatientTests">
         <methods>
-          <include name="validate"/>
+          <include name="validateRegistration"/>
           <include name="instantiateDriver"/>
         </methods>
-      </class> <!-- org.iit.adminmodule.tests.PayFeeTest -->
+      </class> <!-- org.iit.mmp.patientmodule.tests.RegistrationPatientTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

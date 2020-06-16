@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Neha\AppData\Local\Temp\testng-eclipse-547482450\testng-customsuite.xml</span>
+                    <span>C:\Users\Neha\AppData\Local\Temp\testng-eclipse--1731753012\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.iit.adminmodule.tests.PayFeeTest" class="method navigator-link" hash-for-method="validate">validate</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="org.iit.mmp.patientmodule.tests.RegistrationPatientTests" class="method navigator-link" hash-for-method="validateRegistration">validateRegistration</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,21 +120,17 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">org.iit.adminmodule.tests.PayFeeTest</span>
+              <span class="class-name">org.iit.mmp.patientmodule.tests.RegistrationPatientTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validate">
-                  </a> <!-- validate -->
-                  <span class="method-name">validate</span>
-                  <div class="stack-trace">org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been &quot;select&quot; but was &quot;option&quot;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;NEHA-PC&apos;, ip: &apos;192.168.154.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.4&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:48)
-	at org.iit.mmp.patientmodule.pages.PayFeesPage.CardDetails(PayFeesPage.java:68)
-	at org.iit.adminmodule.tests.PayFeeTest.validate(PayFeeTest.java:94)
+                  <a name="validateRegistration">
+                  </a> <!-- validateRegistration -->
+                  <span class="method-name">validateRegistration</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at org.iit.mmp.helper.Helperclass.launchApplicationURL(Helperclass.java:40)
+	at org.iit.mmp.patientmodule.tests.RegistrationPatientTests.validateRegistration(RegistrationPatientTests.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -162,7 +158,7 @@ Driver info: driver.version: unknown
 
 </div> <!-- stack-trace -->
                   <em>
-(US_006 Pay Fees)                  </em>
+(US_001 Registration of the Page)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -170,7 +166,7 @@ Driver info: driver.version: unknown
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Neha\AppData\Local\Temp\testng-eclipse-547482450\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Neha\AppData\Local\Temp\testng-eclipse--1731753012\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -179,7 +175,7 @@ Driver info: driver.version: unknown
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;org.iit.adminmodule.tests.PayFeeTest&quot;/&gt;
+      &lt;class name=&quot;org.iit.mmp.patientmodule.tests.RegistrationPatientTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -204,18 +200,18 @@ Driver info: driver.version: unknown
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">Adminmodulemodule</span>
+              <span class="test-group-name">US_001</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">validate</span>
+                <span class="method-in-group-name">validateRegistration</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
-              <span class="test-group-name">US_001</span>
+              <span class="test-group-name">patientmodule</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">validate</span>
+                <span class="method-in-group-name">validateRegistration</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -223,7 +219,7 @@ Driver info: driver.version: unknown
               <span class="test-group-name">regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">validate</span>
+                <span class="method-in-group-name">validateRegistration</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -231,7 +227,7 @@ Driver info: driver.version: unknown
               <span class="test-group-name">sanity</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">validate</span>
+                <span class="method-in-group-name">validateRegistration</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -253,14 +249,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validate')
-data.setCell(0, 2, 'org.iit.adminmodule.tests.PayFeeTest')
-data.setCell(0, 3, 99227);
+data.setCell(0, 1, 'validateRegistration')
+data.setCell(0, 2, 'org.iit.mmp.patientmodule.tests.RegistrationPatientTests')
+data.setCell(0, 3, 3015);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -286,7 +282,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.iit.adminmodule.tests.PayFeeTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">org.iit.mmp.patientmodule.tests.RegistrationPatientTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">instantiateDriver</span>
                 <span class="method-start">0 ms</span>
@@ -294,8 +290,8 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">validate</span>
-                <span class="method-start">9582 ms</span>
+                <span class="method-name">validateRegistration</span>
+                <span class="method-start">5990 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

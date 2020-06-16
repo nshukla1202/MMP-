@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="none" name="Failed suite [Suite]" verbose="10">
-  <parameter name="password" value="Ria12345 "/>
+<suite name="Failed suite [Suite]" verbose="10">
+  <parameter name="moduleNavigation" value="Information"/>
   <parameter name="url" value="http://96.84.175.78/MMP-Release2-Integrated-Build.6.8.000/portal/login.php"/>
-  <parameter name="username" value="ria1 "/>
-  <test parallel="none" name="Test(failed)">
-    <parameter name="password" value="Ria12345 "/>
+  <test name="ViewInformationTest">
+    <parameter name="moduleNavigation" value="Information"/>
     <parameter name="url" value="http://96.84.175.78/MMP-Release2-Integrated-Build.6.8.000/portal/login.php"/>
-    <parameter name="username" value="ria1 "/>
     <classes>
-      <class name="org.Realtime.MMPProejct.ViewInformationTestcase">
-        <methods>
-          <include name="Login"/>
-          <include name="openBrowser"/>
-          <include name="TestSetup"/>
-          <include name="ViewInformation"/>
-        </methods>
-      </class> <!-- org.Realtime.MMPProejct.ViewInformationTestcase -->
+      <class name="org.iit.mmp.patientmodule.tests.ViewInformationTest"/>
+      <class name="org.iit.mmp.patientmodule.tests.ScheduleAppointmentTest"/>
+      <class name="org.iit.mmp.patientmodule.tests.PayFeeTest"/>
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- ViewInformationTest -->
 </suite> <!-- Failed suite [Suite] -->
